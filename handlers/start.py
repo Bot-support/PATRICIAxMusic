@@ -9,38 +9,40 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAIp9mBtwBBZGywWEmV-WC8gcMArjusuAAKMAgACTp1xV6m-mtC1YTfoHgQ")
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
-\nI can play music in your group's voice chat
-Maintained by @HEROGAMERS1 ❤
-\nTo add in your group contact us at @LaylaSupport.
+        f"""<b>Hi💘 {message.from_user.first_name}!
+\n⚜️I can play music in voice chats of Telegeam Groups. I have a lot of cool feature that will amaze you!
+
+⚜️ Do you want me to play music in your Telegram groups'voice chats? Please click the '⚜️Manual ' button below to know how you can use me.
+
+⚜️ The Assistant must be in your group to play music in the voice chat of your group.
+
+⚜️ More info & commands mentioned in the MANUAL 
+
+A project by patricia's
+\nTo add in your group contact us at @patricia_support.
 \nHit /help list of available commands.
  </b>""",
       
        
         reply_markup=InlineKeyboardMarkup(
             [
+                
                 [
                     InlineKeyboardButton(
-                        "🌍 Music World", url="https://t.me/GIRLS_AND_BOYS_CHATTING",
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/LaylaSupport"
+                        "⚜️Support⚜️", url="https://t.me/patricia_support"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/LaylaList"
-                    ),
-                    InlineKeyboardButton(
-                        "💾 Source code", url="https://github.com/QueenArzoo/VCPlayBot"
-                    )
-                ],
+                        "🔊 Channel", url="https://t.me/patricia_updates"
+                    )        
+                     ],
                 [
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/VCPlayBotBot?startgroup=true"
-                    ) 
+                        "⚜️ Add To Your Group ⚜️", url="https://t.me/patriciaXmusic_bot?startgroup=true"
+                    ),
+                      InlineKeyboardButton(
+                        "⚜️mannual⚜️", url="https://telegra.ph/MANUAL-04-30-4"
+                    )
                 ]
             ]
         )
@@ -58,7 +60,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/LaylaList"
+                        "🔥 Channel", url="https://t.me/patricia_updates"
                     )
                 ],    
                 [    
@@ -83,13 +85,13 @@ async def help(client: Client, message: Message):
         f"""<b>Hi {message.from_user.first_name}!
 \n/play <song name> - play song you requested
 /dplay <song name> - play song you requested via deezer
-/splay <song name> - play song you requested via jio saavn
+/saavn <song name> - play song you requested via jio saavn
 /playlist - Show now playing list
 /current - Show now playing
 /song <song name> - download songs you want quickly
 /search <query> - search videos on youtube with details
 /deezer <song name> - download songs you want quickly via deezer
-/saavn <song name> - download songs you want quickly via saavn
+/splay <song name> - download songs you want quickly via saavn
 /video <song name> - download videos you want quickly
 \n*Admins only*
 /player - open music player settings panel
@@ -104,7 +106,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/LaylaList"
+                        "🔥 Channel", url="https://t.me/patricia_updates"
                     )
                 ]
             ]
