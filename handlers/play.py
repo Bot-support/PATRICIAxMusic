@@ -399,14 +399,14 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔥 **working**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "@VCPlayRobot"
+        user.first_name =  "@patriciaXmusic"
     usar = user
     wew = usar.id
     try:
@@ -427,7 +427,7 @@ async def play(_, message: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@VCPlayRobot userbot joined your chat</b>",
+                                  "<b>@patriciaXmusic userbot joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -435,8 +435,8 @@ async def play(_, message: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @VCPlayRoBot to your Group and try again</b>",
+                                  f"<b>🔥 Flood Wait Error 🔥 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                                  "\n\nOr manually add @patriciaXmusic to your Group and try again</b>",
                               )
                               pass
     try:
@@ -444,12 +444,12 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> @VCPlayRobot Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i> @patriciaXmusic Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🎸 **searching**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -460,7 +460,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎤 **working**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -533,7 +533,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="✯𝗩𝗖𝗣𝗹𝗮𝘆✯▶️ **Playing** here the song requested by {} 😜".format(
+        caption="🔥𝙋𝘼𝙏𝙍𝙄𝘾𝙄𝘼🔥🎶 **Playing** here the song requested by {} 🎸".format(
         message.from_user.mention()
         ),
     )
@@ -548,13 +548,13 @@ async def play(_, message: Message):
 )
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🎤 **working**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "VCPlayBot"
+        user.first_name =  "patriciaXmusic_bot"
     usar = user
     wew = usar.id
     try:
@@ -575,7 +575,7 @@ async def deezer(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@VCPlayRoBot userbot joined your chat</b>",
+                                  "<b>@patriciaXmusic userbot joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -583,8 +583,8 @@ async def deezer(client: Client, message_: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @VCPlayRoBot to your Group and try again</b>",
+                                  f"<b>🔥 Flood Wait Error 🔥 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                                  "\n\nOr manually add @patriciaXmusic to your Group and try again</b>",
                               )
                               pass
     try:
@@ -592,7 +592,7 @@ async def deezer(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>Looks like @VCPlayRoBot Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i>Looks like @patriciaXmusic Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return                            
     requested_by = message_.from_user.first_name   
@@ -647,9 +647,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}")
+        await res.edit_text(f"🔥𝙋𝘼𝙏𝙍𝙄𝘾𝙄𝘼🔥=#️⃣ Queued at position {position}")
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("🔥𝙋𝘼𝙏𝙍𝙄𝘾𝙄𝘼🔥=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -672,19 +672,19 @@ async def deezer(client: Client, message_: Message):
 
 
 @Client.on_message(
-    filters.command("splay")
+    filters.command("saavn")
     & filters.group
     & ~ filters.edited
 )
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **working**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "VCPlayBot"
+        user.first_name =  "patriciaXmusic_bot"
     usar = user
     wew = usar.id
     try:
@@ -705,7 +705,7 @@ async def jiosaavn(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@VCPlayRobot helper userbot joined your chat</b>",
+                                  "<b>@patriciaXmusic helper userbot joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -713,8 +713,8 @@ async def jiosaavn(client: Client, message_: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @VCPlayRobot to your Group and try again</b>",
+                                  f"<b>🔥 Flood Wait Error 🔥 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                                  "\n\nOr manually add @patriciaXmusic to your Group and try again</b>",
                               )
                               pass
     try:
@@ -722,7 +722,7 @@ async def jiosaavn(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> @VCPlayRobot helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            "<i> @patriciaXmusic helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return     
     requested_by = message_.from_user.first_name
@@ -758,7 +758,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Join Updates Channel",
-                   url='https://t.me/LaylaList')
+                   url='https://t.me/patricia_updates')
              ],
              [       
                InlineKeyboardButton(
@@ -782,12 +782,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}",
+            caption=f"🔥𝙋𝘼𝙏𝙍𝙄𝘾𝙄𝘼🔥=#️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("🔥𝙋𝘼𝙏𝙍𝙄𝘾𝙄𝘼🔥=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
